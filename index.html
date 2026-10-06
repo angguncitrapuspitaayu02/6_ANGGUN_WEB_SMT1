@@ -2,72 +2,173 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Linktree Profil Siswa
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Profil - Anggun Citra</title>
+    <!-- Font google lucu & estetik (Poppins & Fredoka) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e6f2ff;
-            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a8dede 0%, #ffe3e8 50%, #e0c3fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
         }
 
         .card {
-            background-color: white;
-            width: 300px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 15px;
-            border: 2px solid #b3d9ff;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 350px;
+            padding: 30px 20px;
+            border-radius: 28px;
+            box-shadow: 0 15px 35px rgba(100, 100, 150, 0.15);
+            border: 3px solid #ffffff;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
         }
 
-        .foto {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        h1 {
-            color: #3385ff;
-            font-size: 18px;
-            margin: 10px 0 5px 0;
-        }
-
-        p {
-            color: #555;
-            font-size: 13px;
+        .avatar-wrapper {
+            position: relative;
+            display: inline-block;
             margin-bottom: 15px;
         }
 
-        .link {
-            display: block;
-            background-color: #cce6ff;
-            color: #0056b3;
-            text-decoration: none;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 8px;
-            font-weight: bold;
+        .foto {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
+        .badge-cute {
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+            background: #ffb7c5;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Fredoka', cursive;
+            color: #5b6b9c;
+            font-size: 20px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-kelas {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .bio {
+            color: #718096;
+            font-size: 12.5px;
+            line-height: 1.5;
+            margin-bottom: 22px;
+            padding: 0 10px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #5b6b9c;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 2px solid #eef2f7;
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Warna Sentuhan Unik Saat Di-hover */
+        .link-ig:hover { background-color: #fff0f5; border-color: #ffb6c1; color: #e1306c; }
+        .link-tiktok:hover { background-color: #f0f8ff; border-color: #b0e0e6; color: #000000; }
+        .link-wa:hover { background-color: #f0fff4; border-color: #98fb98; color: #25d366; }
+        .link-yt:hover { background-color: #fff5f5; border-color: #ffc0cb; color: #ff0000; }
+
         .link:hover {
-            background-color: #99ceff; 
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .footer-heart {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #a0aec0;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <img src="https://i.pinimg.com/736x/79/a3/b5/79a3b50edca118cfcb255b7dd68b6217.jpg" class="foto" alt="Foto Profil">
+        <!-- Foto Profil dengan Frame Halus & Badge Lucu -->
+        <div class="avatar-wrapper">
+            <img src="https://i.pinimg.com/736x/79/a3/b5/79a3b50edca118cfcb255b7dd68b6217.jpg" class="foto" alt="Foto Profil">
+            <span class="badge-cute">✨ Student</span>
+        </div>
 
-        <h1>Anggun Citra Puspita Ayu</h1>
-        <p>Kelas XI - TJKT - 2</p>
-        <p>Halo! Saya siswa yang suka belajar hal baru. Salam kenal semuanya! 💙</p>
+        <h1>Anggun Citra P. A.</h1>
+        <div class="tag-kelas">🏫 XI - TJKT - 2</div>
+        
+        <p class="bio">Halo! Saya siswa yang suka belajar hal baru. Salam kenal semuanya! 🧋🌸</p>
 
-        <a href="https://www.instagram.com/anggunctrap?igsh=Y3ZrMzV2czE4aXo2" target="_blank" class="link">Instagram</a>
-        <a href="https://www.tiktok.com/@raaurraaura" target="_blank" class="link">TikTok</a>
-        <a href="https://wa.me/qr/MTOSSVZQ3BWPB1" target="_blank" class="link">WhatsApp</a>
-        <a href="https://youtube.com/@angguncitrap.a0" target="_blank" class="link">YouTube</a>
+        <!-- Daftar Link Sosial Media -->
+        <div class="links-container">
+            <a href="https://www.instagram.com/anggunctrap?igsh=Y3ZrMzV2czE4aXo2" target="_blank" class="link link-ig">
+                📸 Instagram
+            </a>
+            <a href="https://www.tiktok.com/@raaurraaura" target="_blank" class="link link-tiktok">
+                🎵 TikTok
+            </a>
+            <a href="https://wa.me/qr/MTOSSVZQ3BWPB1" target="_blank" class="link link-wa">
+                💬 WhatsApp
+            </a>
+            <a href="https://youtube.com/@angguncitrap.a0" target="_blank" class="link link-yt">
+                🎬 YouTube
+            </a>
+        </div>
+
+        <div class="footer-heart">Made with 🤍</div>
     </div>
 
 </body>
